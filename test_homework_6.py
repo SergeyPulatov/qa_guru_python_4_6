@@ -72,7 +72,10 @@ def test_readable_function():
 
 
 def Full_Normal_Name(func, *args):
-    return f'{func.__name__.replace("_", " ").title()} [{", ".join(args)}]'
+    values = f'{func.__name__.replace("_", " ").title()} [{", ".join(args)}]'
+    print(values)
+    return values
+
 
 
 def open_browser(browser_name):
