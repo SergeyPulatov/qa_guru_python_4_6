@@ -1,5 +1,6 @@
 from datetime import time
 
+
 def test_dark_theme():
     """
     Протестируйте правильность переключения темной темы на сайте
@@ -15,7 +16,6 @@ def test_dark_theme():
 
     assert is_dark_theme is True
 
-
     current_time = time(hour=16)
     dark_theme_enabled = True
     # TODO переключите темную тему в зависимости от времени суток,
@@ -29,6 +29,7 @@ def test_dark_theme():
         is_dark_theme = False
 
     assert is_dark_theme is True
+
 
 def test_find_suitable_user():
     """
@@ -52,6 +53,7 @@ def test_find_suitable_user():
         {"name": "Maria", "age": 18},
     ]
 
+
 # Сделайте функцию, которая будет печатать
 # читаемое имя переданной ей функции и значений аргументов.
 # Вызовите ее внутри функций, описанных ниже
@@ -68,17 +70,20 @@ def test_readable_function():
     go_to_companyname_homepage(page_url="https://companyname.com")
     find_registration_button_on_login_page(page_url="https://companyname.com/login", button_text="Register")
 
+
 def Full_Normal_Name(func, *args):
-    return f'{func.__name__.replace("_", " ").title()} [{", " .join(args)}]'
+    return f'{func.__name__.replace("_", " ").title()} [{", ".join(args)}]'
 
 
 def open_browser(browser_name):
     actual_result = Full_Normal_Name(open_browser, browser_name)
     assert actual_result == "Open Browser [Chrome]"
 
+
 def go_to_companyname_homepage(page_url):
     actual_result = Full_Normal_Name(go_to_companyname_homepage, page_url)
     assert actual_result == "Go To Companyname Homepage [https://companyname.com]"
+
 
 def find_registration_button_on_login_page(page_url, button_text):
     actual_result = Full_Normal_Name(find_registration_button_on_login_page, page_url, button_text)
