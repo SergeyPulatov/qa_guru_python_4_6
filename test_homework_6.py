@@ -77,7 +77,6 @@ def Full_Normal_Name(func, *args):
     return values
 
 
-
 def open_browser(browser_name):
     actual_result = Full_Normal_Name(open_browser, browser_name)
     assert actual_result == "Open Browser [Chrome]"
